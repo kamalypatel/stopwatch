@@ -1,20 +1,4 @@
 
-// this is a Factory function
-
-function createCircle(radius) {
-    return {
-        radius,
-        draw: function() {
-            console.log('draw');
-        }
-    };
-};
-
-const circle = createCircle(1);
-
-
-// this is a Constructor function
-
 function Stopwatch() {
     let duration = 0;
     let startTime = 0;
