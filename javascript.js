@@ -44,14 +44,14 @@ var starter = document.getElementById('start')
 starter.addEventListener("click", () => {
 	sw.start()
     console.log('started')
-    document.getElementById('timer').innerText = 'running...';
+    document.getElementById('time').innerText = 'running...';
 })
 
 var stopper = document.getElementById('stop')
 
 stopper.addEventListener("click", () => {
 	sw.stop();
-    document.getElementById('timer').innerHTML = sw.duration();
+    document.getElementById('time').innerHTML = sw.duration();
 })
 
 
@@ -59,5 +59,5 @@ var reset = document.getElementById('reset')
 
 reset.addEventListener("click", () => {
 	sw.reset();
-    document.getElementById('timer').innerText = '0 seconds';
+    document.getElementById('time').innerText = '0 seconds';
 })
