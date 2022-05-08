@@ -19,7 +19,7 @@ function Stopwatch() {
         stopTime = new Date()
 
         let seconds = (stopTime.getTime() - startTime.getTime()) / 1000
-        duration = duration + seconds;
+        duration = duration + Math.trunc(seconds);
 
         running = false
     }
@@ -44,6 +44,7 @@ var starter = document.getElementById('start')
 starter.addEventListener("click", () => {
 	sw.start()
     console.log('started')
+    document.getElementById('timer').innerText = 'running...';
 })
 
 var stopper = document.getElementById('stop')
@@ -58,5 +59,5 @@ var reset = document.getElementById('reset')
 
 reset.addEventListener("click", () => {
 	sw.reset();
-    document.getElementById('timer').innerText = '00:00';
+    document.getElementById('timer').innerText = '0 seconds';
 })
